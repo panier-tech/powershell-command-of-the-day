@@ -1,0 +1,91 @@
+name: Deploy PowerShell RSS
+
+on:
+  schedule:
+    # 毎日 09:00 JST
+    # GitHub ActionsのcronはUTC
+    - cron: "0 0 * * *"
+
+  # GitHub Actions画面から手動実行できるようにする
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "github-pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build RSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Create site directory
+        run: |
+          mkdir -p _site
+
+      - name: Generate RSS
+        run: |
+          python generate.py _site/feed.xml
+
+      - name: Create index.html
+        run: |
+          cat > _site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="ja">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>PowerShell Command of the Day</title>
+          </head>
+          <body>
+            <h1>PowerShell Command of the Day</h1>
+
+            <p>
+              PowerShellの便利なコマンドを
+              1日1個紹介するRSSフィードです。
+            </p>
+
+            <p>
+              <a href="feed.xml">
+                RSS Feed
+              </a>
+            </p>
+          </body>
+          </html>
+          EOF
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,402 @@
+[
+  {
+    "command": "Add-Content",
+    "description": "ファイルの末尾に内容を追加します。",
+    "example": "Add-Content file.txt \"Hello\""
+  },
+  {
+    "command": "Add-Member",
+    "description": "オブジェクトにプロパティやメソッドを追加します。",
+    "example": "$obj | Add-Member -MemberType NoteProperty -Name Name -Value \"PowerShell\""
+  },
+  {
+    "command": "Add-Type",
+    "description": ".NET の型やコードを PowerShell に追加します。",
+    "example": "Add-Type -AssemblyName System.Windows.Forms"
+  },
+  {
+    "command": "Clear-Content",
+    "description": "ファイルの内容を削除します。",
+    "example": "Clear-Content file.txt"
+  },
+  {
+    "command": "Clear-Host",
+    "description": "コンソール画面をクリアします。",
+    "example": "Clear-Host"
+  },
+  {
+    "command": "Clear-History",
+    "description": "PowerShell のコマンド履歴を消去します。",
+    "example": "Clear-History"
+  },
+  {
+    "command": "Clear-Item",
+    "description": "項目の内容を消去します。",
+    "example": "Clear-Item variable:foo"
+  },
+  {
+    "command": "Compare-Object",
+    "description": "2つのオブジェクトを比較して差分を表示します。",
+    "example": "Compare-Object $a $b"
+  },
+  {
+    "command": "Compress-Archive",
+    "description": "ファイルやディレクトリを ZIP アーカイブに圧縮します。",
+    "example": "Compress-Archive -Path ./data -DestinationPath data.zip"
+  },
+  {
+    "command": "ConvertFrom-Csv",
+    "description": "CSV データを PowerShell オブジェクトに変換します。",
+    "example": "Import-Csv data.csv | ConvertTo-Csv"
+  },
+  {
+    "command": "ConvertFrom-Json",
+    "description": "JSON データを PowerShell オブジェクトに変換します。",
+    "example": "'{\"name\":\"PowerShell\"}' | ConvertFrom-Json"
+  },
+  {
+    "command": "ConvertTo-Csv",
+    "description": "PowerShell オブジェクトを CSV に変換します。",
+    "example": "Get-Process | ConvertTo-Csv"
+  },
+  {
+    "command": "ConvertTo-Html",
+    "description": "PowerShell オブジェクトを HTML に変換します。",
+    "example": "Get-Process | ConvertTo-Html"
+  },
+  {
+    "command": "ConvertTo-Json",
+    "description": "PowerShell オブジェクトを JSON に変換します。",
+    "example": "Get-Process | ConvertTo-Json"
+  },
+  {
+    "command": "Copy-Item",
+    "description": "ファイルやディレクトリをコピーします。",
+    "example": "Copy-Item file.txt backup.txt"
+  },
+  {
+    "command": "Expand-Archive",
+    "description": "ZIP アーカイブを展開します。",
+    "example": "Expand-Archive data.zip -DestinationPath ./data"
+  },
+  {
+    "command": "Export-Csv",
+    "description": "オブジェクトを CSV ファイルへ保存します。",
+    "example": "Get-Process | Export-Csv processes.csv"
+  },
+  {
+    "command": "Export-Clixml",
+    "description": "オブジェクトを CLIXML ファイルへ保存します。",
+    "example": "Get-Process | Export-Clixml processes.xml"
+  },
+  {
+    "command": "ForEach-Object",
+    "description": "パイプラインから受け取った各オブジェクトに処理を実行します。",
+    "example": "1..5 | ForEach-Object { $_ * 2 }"
+  },
+  {
+    "command": "Format-List",
+    "description": "オブジェクトをリスト形式で表示します。",
+    "example": "Get-Process | Format-List"
+  },
+  {
+    "command": "Format-Table",
+    "description": "オブジェクトを表形式で表示します。",
+    "example": "Get-Process | Format-Table Name, Id, CPU"
+  },
+  {
+    "command": "Get-Alias",
+    "description": "登録されているエイリアスを取得します。",
+    "example": "Get-Alias"
+  },
+  {
+    "command": "Get-ChildItem",
+    "description": "ファイルやディレクトリの一覧を取得します。",
+    "example": "Get-ChildItem ~/Downloads"
+  },
+  {
+    "command": "Get-Command",
+    "description": "利用可能なコマンドを検索します。",
+    "example": "Get-Command git"
+  },
+  {
+    "command": "Get-Content",
+    "description": "ファイルの内容を読み取ります。",
+    "example": "Get-Content file.txt"
+  },
+  {
+    "command": "Get-Date",
+    "description": "現在の日付と時刻を取得します。",
+    "example": "Get-Date"
+  },
+  {
+    "command": "Get-Error",
+    "description": "最近発生したエラーの詳細を表示します。",
+    "example": "Get-Error"
+  },
+  {
+    "command": "Get-FileHash",
+    "description": "ファイルのハッシュ値を計算します。",
+    "example": "Get-FileHash file.iso -Algorithm SHA256"
+  },
+  {
+    "command": "Get-Help",
+    "description": "コマンドのヘルプ情報を表示します。",
+    "example": "Get-Help Get-Process"
+  },
+  {
+    "command": "Get-History",
+    "description": "過去に実行したコマンドの履歴を取得します。",
+    "example": "Get-History"
+  },
+  {
+    "command": "Get-Item",
+    "description": "ファイルやディレクトリなどの項目を取得します。",
+    "example": "Get-Item ./file.txt"
+  },
+  {
+    "command": "Get-ItemProperty",
+    "description": "項目のプロパティを取得します。",
+    "example": "Get-ItemProperty ./file.txt"
+  },
+  {
+    "command": "Get-Location",
+    "description": "現在の作業ディレクトリを取得します。",
+    "example": "Get-Location"
+  },
+  {
+    "command": "Get-Member",
+    "description": "オブジェクトが持つプロパティやメソッドを調べます。",
+    "example": "Get-Process | Get-Member"
+  },
+  {
+    "command": "Get-Module",
+    "description": "読み込まれている PowerShell モジュールを取得します。",
+    "example": "Get-Module"
+  },
+  {
+    "command": "Get-Process",
+    "description": "現在実行中のプロセスを表示します。",
+    "example": "Get-Process"
+  },
+  {
+    "command": "Get-PSDrive",
+    "description": "PowerShell で利用可能なドライブを取得します。",
+    "example": "Get-PSDrive"
+  },
+  {
+    "command": "Get-Random",
+    "description": "ランダムな値を生成します。",
+    "example": "Get-Random -Minimum 1 -Maximum 100"
+  },
+  {
+    "command": "Get-TimeZone",
+    "description": "現在のタイムゾーン情報を取得します。",
+    "example": "Get-TimeZone"
+  },
+  {
+    "command": "Get-Uptime",
+    "description": "システムの稼働時間を取得します。",
+    "example": "Get-Uptime"
+  },
+  {
+    "command": "Get-Variable",
+    "description": "現在定義されている変数を取得します。",
+    "example": "Get-Variable"
+  },
+  {
+    "command": "Group-Object",
+    "description": "オブジェクトを指定したプロパティごとにグループ化します。",
+    "example": "Get-Process | Group-Object ProcessName"
+  },
+  {
+    "command": "Import-Csv",
+    "description": "CSV ファイルを PowerShell オブジェクトとして読み込みます。",
+    "example": "Import-Csv data.csv"
+  },
+  {
+    "command": "Import-Module",
+    "description": "PowerShell モジュールを読み込みます。",
+    "example": "Import-Module Microsoft.PowerShell.Management"
+  },
+  {
+    "command": "Invoke-Command",
+    "description": "ローカルまたはリモートでコマンドを実行します。",
+    "example": "Invoke-Command -ComputerName server01 -ScriptBlock { Get-Process }"
+  },
+  {
+    "command": "Invoke-RestMethod",
+    "description": "REST API に HTTP リクエストを送信します。",
+    "example": "Invoke-RestMethod https://api.github.com/repos/PowerShell/PowerShell"
+  },
+  {
+    "command": "Invoke-WebRequest",
+    "description": "Web サーバーへ HTTP リクエストを送信します。",
+    "example": "Invoke-WebRequest https://example.com"
+  },
+  {
+    "command": "Join-Path",
+    "description": "複数のパス要素を結合してパスを作成します。",
+    "example": "Join-Path ~/Downloads file.txt"
+  },
+  {
+    "command": "Measure-Command",
+    "description": "コマンドの実行時間を測定します。",
+    "example": "Measure-Command { Get-ChildItem }"
+  },
+  {
+    "command": "Measure-Object",
+    "description": "オブジェクトの数や合計などを計算します。",
+    "example": "Get-ChildItem | Measure-Object"
+  },
+  {
+    "command": "Move-Item",
+    "description": "ファイルやディレクトリを移動します。",
+    "example": "Move-Item file.txt ~/Downloads/"
+  },
+  {
+    "command": "New-Guid",
+    "description": "新しい GUID を生成します。",
+    "example": "New-Guid"
+  },
+  {
+    "command": "New-Item",
+    "description": "ファイルやディレクトリなどの新しい項目を作成します。",
+    "example": "New-Item -ItemType Directory ./newdir"
+  },
+  {
+    "command": "New-TemporaryFile",
+    "description": "一時ファイルを作成します。",
+    "example": "New-TemporaryFile"
+  },
+  {
+    "command": "Out-File",
+    "description": "出力をファイルへ保存します。",
+    "example": "Get-Process | Out-File processes.txt"
+  },
+  {
+    "command": "Out-Null",
+    "description": "パイプラインの出力を破棄します。",
+    "example": "Write-Output \"Hello\" | Out-Null"
+  },
+  {
+    "command": "Read-Host",
+    "description": "コンソールからユーザー入力を読み取ります。",
+    "example": "$name = Read-Host \"Name\""
+  },
+  {
+    "command": "Remove-Item",
+    "description": "ファイルやディレクトリなどの項目を削除します。",
+    "example": "Remove-Item ./old.txt"
+  },
+  {
+    "command": "Rename-Item",
+    "description": "ファイルやディレクトリなどの名前を変更します。",
+    "example": "Rename-Item old.txt new.txt"
+  },
+  {
+    "command": "Resolve-Path",
+    "description": "パスを解決して実際のパス情報を取得します。",
+    "example": "Resolve-Path ./file.txt"
+  },
+  {
+    "command": "Select-Object",
+    "description": "オブジェクトから指定したプロパティや要素を選択します。",
+    "example": "Get-Process | Select-Object Name, Id"
+  },
+  {
+    "command": "Select-String",
+    "description": "ファイルや文字列から指定したパターンを検索します。",
+    "example": "Select-String -Path *.log -Pattern \"error\""
+  },
+  {
+    "command": "Set-Clipboard",
+    "description": "文字列などをクリップボードへ設定します。",
+    "example": "\"Hello\" | Set-Clipboard"
+  },
+  {
+    "command": "Set-Content",
+    "description": "ファイルの内容を書き換えます。",
+    "example": "Set-Content file.txt \"Hello\""
+  },
+  {
+    "command": "Set-Location",
+    "description": "現在の作業ディレクトリを変更します。",
+    "example": "Set-Location ~/Downloads"
+  },
+  {
+    "command": "Sort-Object",
+    "description": "オブジェクトを指定した条件で並べ替えます。",
+    "example": "Get-Process | Sort-Object CPU -Descending"
+  },
+  {
+    "command": "Split-Path",
+    "description": "パスをディレクトリ名やファイル名などの部分に分割します。",
+    "example": "Split-Path /home/user/file.txt -Leaf"
+  },
+  {
+    "command": "Start-Process",
+    "description": "新しいプロセスを起動します。",
+    "example": "Start-Process firefox"
+  },
+  {
+    "command": "Start-Sleep",
+    "description": "指定した時間だけ処理を一時停止します。",
+    "example": "Start-Sleep -Seconds 5"
+  },
+  {
+    "command": "Stop-Process",
+    "description": "実行中のプロセスを停止します。",
+    "example": "Stop-Process -Name firefox"
+  },
+  {
+    "command": "Tee-Object",
+    "description": "出力をファイルなどへ保存しながら次の処理へ渡します。",
+    "example": "Get-Process | Tee-Object processes.txt | Format-Table"
+  },
+  {
+    "command": "Test-Connection",
+    "description": "ホストへの接続を確認します。",
+    "example": "Test-Connection example.com"
+  },
+  {
+    "command": "Test-Json",
+    "description": "文字列が有効な JSON か検証します。",
+    "example": "'{\"name\":\"PowerShell\"}' | Test-Json"
+  },
+  {
+    "command": "Test-Path",
+    "description": "指定したパスが存在するか確認します。",
+    "example": "Test-Path ./file.txt"
+  },
+  {
+    "command": "Unblock-File",
+    "description": "ファイルに設定されたインターネット由来のブロックを解除します。",
+    "example": "Unblock-File downloaded.ps1"
+  },
+  {
+    "command": "Where-Object",
+    "description": "条件に一致するオブジェクトだけを選択します。",
+    "example": "Get-Process | Where-Object CPU -gt 10"
+  },
+  {
+    "command": "Write-Error",
+    "description": "エラー情報をエラーストリームへ出力します。",
+    "example": "Write-Error \"Something went wrong\""
+  },
+  {
+    "command": "Write-Host",
+    "description": "コンソールへ文字列を表示します。",
+    "example": "Write-Host \"Hello, PowerShell!\""
+  },
+  {
+    "command": "Write-Output",
+    "description": "オブジェクトをパイプラインへ出力します。",
+    "example": "Write-Output \"Hello\""
+  },
+  {
+    "command": "Write-Warning",
+    "description": "警告メッセージを表示します。",
+    "example": "Write-Warning \"Be careful!\""
+  }
+]
