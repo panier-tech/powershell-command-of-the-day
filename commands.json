@@ -55,6 +55,11 @@
     "example": "'{\"name\":\"PowerShell\"}' | ConvertFrom-Json"
   },
   {
+    "command": "Get-ExecutionPolicy",
+    "description": "PowerShellのスクリプト実行ポリシーを確認します。",
+    "example": "Get-ExecutionPolicy -Scope CurrentUser"
+  },
+  {
     "command": "ConvertTo-Csv",
     "description": "PowerShell オブジェクトを CSV に変換します。",
     "example": "Get-Process | ConvertTo-Csv"
@@ -318,6 +323,11 @@
     "command": "Set-Content",
     "description": "ファイルの内容を書き換えます。",
     "example": "Set-Content file.txt \"Hello\""
+  },
+  {
+    "command": "Set-ExecutionPolicy",
+    "description": "PowerShellのスクリプト実行ポリシーを変更します。",
+    "example": "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
   },
   {
     "command": "Set-Location",
